@@ -35,7 +35,7 @@ nav a:hover {
 
 /* ===== メインビジュアル ===== */
 .hero {
-  background: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e")
+  background: url("images/top.jpg")
     center / cover;
   height: 45vh; /* ← 高さを小さく */
   display: flex;
