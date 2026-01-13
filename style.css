@@ -263,3 +263,17 @@ footer {
     display: inline;
   }
 }
+
+/* ===== スマホでポートフォリオを2列にする ===== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* スマホ2列 */
+        gap: 12px;
+    }
+}
