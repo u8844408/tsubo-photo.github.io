@@ -277,3 +277,39 @@ footer {
         gap: 12px;
     }
 }
+
+/* ▼ ヒーロー画像のフェードイン */
+.hero {
+  opacity: 0;
+  animation: heroFadeIn 1.4s ease forwards;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ▼ ヒーロー内の文字のフェードイン */
+.hero-text {
+  opacity: 0;
+  animation: heroTextFadeIn 1.4s ease forwards;
+  animation-delay: 0.4s; /* 画像より少し遅らせる */
+}
+
+@keyframes heroTextFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
