@@ -321,20 +321,40 @@ footer {
 }
 
 /* ====== PC 3列 ====== */
-@media (min-width: 1024px) {
-  .voice-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px; /* バランス良く */
+/* ▼ PC向けカードレイアウト最適化 ▼ */
+@media (min-width: 768px) {
+
+  .voice-cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px; /* カード間の横・縦の隙間 */
+    flex-wrap: nowrap; /* 3つ横並びを維持 */
+    margin: 0 auto;
+    max-width: 1200px; /* 過剰な広がりを防止 */
   }
 
   .voice-card {
-    height: 400px; /* 正方形に近づける調整 */
-    padding: 32px;
+    flex: 1;
+    max-width: 360px;              /* カード幅の上限 */
+    aspect-ratio: 1 / 1.05;        /* なるべく正方形、少しだけ縦長 */
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   /* 画像・文字の詰まり防止 */
+    align-items: center;
   }
 
-  .face-icon {
-    width: 140px;
-    height: 140px;
+  /* コメント下の余白を自然に */
+  .voice-card p {
+    margin-bottom: 12px;
+  }
+
+  /* 顔イラストの調整 */
+  .voice-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
   }
 }
 
