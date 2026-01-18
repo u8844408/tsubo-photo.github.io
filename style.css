@@ -330,3 +330,32 @@ footer {
     border-radius: 14px;
   }
 }
+
+/* --- PC（768px以上）2列 --- */
+@media (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* PCは2列 */
+        gap: 24px; /* ボックス間の余白を広げる */
+    }
+
+    .portfolio-item {
+        aspect-ratio: 1 / 1; /* 正方形 */
+        object-fit: cover;
+    }
+}
+
+/* =================================
+   スマホはそのまま
+   ================================= */
+@media (max-width: 767px) {
+  .voice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .voice-card {
+    padding: 28px 22px;
+    border-radius: 14px;
+  }
+}
