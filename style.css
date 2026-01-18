@@ -289,3 +289,27 @@ footer {
     width: 100%; /* 念のため */
   }
 }
+
+/* --- PC（768px以上）では2列にする --- */
+@media (min-width: 768px) {
+  .voice-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* カードの余白 */
+    max-width: 1000px; /* 中央寄せ & 読みやすい幅 */
+    margin: 0 auto;
+  }
+
+  .voice-card {
+    width: 100%;
+  }
+}
+
+/* --- スマホ（768px未満）は1列のまま --- */
+@media (max-width: 767px) {
+  .voice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
