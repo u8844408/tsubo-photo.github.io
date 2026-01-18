@@ -275,3 +275,17 @@ footer {
     margin: 0;
   }
 }
+
+/* --- PC 用：お客様の声を2列にする --- */
+@media (min-width: 769px) {
+  .voices-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* カード間の余白。必要なら調整 */
+    align-items: start;
+  }
+
+  .voice-card {
+    width: 100%; /* 念のため */
+  }
+}
