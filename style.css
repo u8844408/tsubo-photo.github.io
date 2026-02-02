@@ -385,3 +385,43 @@ footer {
   }
 }
 
+/* =======================
+   ツボについて（写真あり2カラム）
+======================= */
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* 左：テキスト */
+.about-text {
+  flex: 1;
+}
+
+/* 右：写真 */
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* ===== スマホは縦並び（今まで通り） ===== */
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-width: 300px;
+  }
+}
+
