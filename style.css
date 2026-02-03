@@ -456,3 +456,18 @@ footer {
   transform: translateY(0);
 }
 
+/* スマホ：2列（今のまま） */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* PC：3列 */
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
